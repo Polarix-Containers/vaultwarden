@@ -8,4 +8,4 @@
 - Comes with the [hardened memory allocator](https://github.com/GrapheneOS/hardened_malloc) built from the latest tag, protecting against some heap-based buffer overflows.
 
 ### Licensing
-- Licensed under AGPL 3 🤮 to comply with licensing by Bitwarden.
+- Licensed under AGPL 3 to comply with licensing by Bitwarden.
