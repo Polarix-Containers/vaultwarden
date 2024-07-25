@@ -17,7 +17,6 @@ COPY --from=ghcr.io/blue-oci/hardened_malloc:latest /install /usr/local/lib/
 ENV LD_PRELOAD="/usr/local/lib/libhardened_malloc.so"
 
 RUN adduser -g ${GID} -u ${UID} --disabled-password --gecos "" vaultwarden
-RUN chown -R vaultwarden:vaultwarden /data
 USER vaultwarden
 
 ENV ROCKET_PORT=8080
