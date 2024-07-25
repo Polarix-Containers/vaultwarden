@@ -8,6 +8,10 @@
 - Daily rebuilds keeping the image up-to-date.
 - Comes with the [hardened memory allocator](https://github.com/GrapheneOS/hardened_malloc) built from the latest tag, protecting against some heap-based buffer overflows.
 
+### Sample Docker Compose config
+
+See this [link](https://github.com/TommyTran732/Docker-Compose-Files/tree/main/vaultwarden).
+
 ### Licensing
 - Licensed under AGPL 3 to comply with licensing by Bitwarden.
 - Any image built by Blue OCI is provided under the combination of license terms resulting from the use of individual packages.
