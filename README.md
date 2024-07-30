@@ -5,8 +5,6 @@
 ### Features & usage
 - Built on the [official Alpine-based image](https://github.com/dani-garcia/vaultwarden/tree/main/docker), to be used as a drop-in replacement.
 - Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID is 3001. Default port is 8080/tcp.
-- Daily rebuilds keeping the image up-to-date.
-- Comes with the [hardened memory allocator](https://github.com/GrapheneOS/hardened_malloc) built from the latest tag, protecting against some heap-based buffer overflows.
 
 ### Sample Docker Compose config
 
