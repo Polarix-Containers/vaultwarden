@@ -1,7 +1,7 @@
 ARG UID=3001
 ARG GID=3001
 
-FROM ghcr.io/dani-garcia/vaultwardentesting-alpine
+FROM ghcr.io/dani-garcia/vaultwarden:testing-alpine
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
