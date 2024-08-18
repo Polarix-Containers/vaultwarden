@@ -1,8 +1,7 @@
-ARG VERSION=1.32.0
 ARG UID=3001
 ARG GID=3001
 
-FROM vaultwarden/server:${VERSION}-alpine
+FROM vaultwarden/server:testing-alpine
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
