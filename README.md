@@ -12,4 +12,4 @@ See this [link](https://github.com/TommyTran732/Docker-Compose-Files/tree/main/v
 
 ### Licensing
 - Licensed under AGPL 3 to comply with licensing by Bitwarden.
-- Any image built by Blue OCI is provided under the combination of license terms resulting from the use of individual packages.
+- Any image built by Polarix Containers is provided under the combination of license terms resulting from the use of individual packages.
