@@ -1,6 +1,7 @@
 # Vaultwarden
 
 ![Build, scan & push](https://github.com/Polarix-Containers/vaultwarden/actions/workflows/build.yml/badge.svg)
+![Build testing, scan & push](https://github.com/Polarix-Containers/vaultwarden/actions/workflows/build-testing.yml/badge.svg)
 
 ### Features & usage
 - Built on the [official Alpine-based image](https://github.com/dani-garcia/vaultwarden/tree/main/docker), to be used as a drop-in replacement.
