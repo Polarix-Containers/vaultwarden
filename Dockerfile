@@ -13,7 +13,7 @@ RUN apk -U upgrade \
     && apk add libstdc++ \
     && rm -rf /var/cache/apk/*
 
-RUN adduser -g ${GID} -u ${UID} --disabled-password --gecos "" vaultwarden
+RUN adduser -g ${GID} -u ${UID} --disabled-password --system --gecos "" vaultwarden
 USER vaultwarden
 
 COPY --from=ghcr.io/polarix-containers/hardened_malloc:latest /install /usr/local/lib/
