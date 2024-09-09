@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - testing
+      - main
     # Ignore Markdown files
     paths-ignore:
       - '**.md'
@@ -36,7 +36,7 @@ jobs:
 
       - name: Extract version for tags
         run: |
-          echo "FULL_VERSION=$(grep -oP '(?<=VERSION=).*' Dockerfile)" >> $GITHUB_ENV
+          echo "FULL_VERSION=$(grep -oP '(?<=VERSION=).*' testing/Dockerfile)" >> $GITHUB_ENV
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -61,7 +61,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: testing
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
@@ -89,7 +89,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
-          category: trivy
+          category: trivy-testing
 
   grype:
     name: Scan current image with Grype
@@ -110,4 +110,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.grype.outputs.sarif }}
-          category: grype
+          category: grype-testing
