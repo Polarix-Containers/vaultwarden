@@ -7,7 +7,7 @@ on:
       - main
     paths:
       - '.github/workflows/build-testing.yml'
-      - 'testing'
+      - 'testing/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
