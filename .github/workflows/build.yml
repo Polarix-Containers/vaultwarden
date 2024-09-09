@@ -34,7 +34,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
-      - name: Extract version for tags
+      - name: Get version
         run: |
           echo "FULL_VERSION=$(grep -oP '(?<=VERSION=).*' latest/Dockerfile)" >> $GITHUB_ENV
 
@@ -62,7 +62,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: latest
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}

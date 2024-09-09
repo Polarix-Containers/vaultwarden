@@ -34,10 +34,6 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
-      - name: Extract version for tags
-        run: |
-          echo "FULL_VERSION=$(grep -oP '(?<=VERSION=).*' testing/Dockerfile)" >> $GITHUB_ENV
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -61,7 +57,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: testing
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
