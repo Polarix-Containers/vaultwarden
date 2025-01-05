@@ -1,6 +1,6 @@
 ARG VERSION=1.32.7
-ARG UID=3001
-ARG GID=3001
+ARG UID=700003
+ARG GID=700003
 
 FROM ghcr.io/dani-garcia/vaultwarden:${VERSION}-alpine
 
