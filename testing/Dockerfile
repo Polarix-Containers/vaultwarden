@@ -1,5 +1,5 @@
-ARG UID=700003
-ARG GID=700003
+ARG UID=200003
+ARG GID=200003
 
 FROM ghcr.io/dani-garcia/vaultwarden:testing-alpine
 

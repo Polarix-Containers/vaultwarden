@@ -5,7 +5,7 @@
 
 ### Features & usage
 - Built on the [official Alpine-based image](https://github.com/dani-garcia/vaultwarden/tree/main/docker), to be used as a drop-in replacement.
-- Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID is 700003. Default port is 8080/tcp.
+- Unprivileged image: you should check your volumes' permissions (eg `/data`), default UID/GID is 200003. Default port is 8080/tcp.
 
 ### Sample Docker Compose config
 
